@@ -5,7 +5,7 @@
 
 body {
   margin: 0 auto;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Arial;
   color: #E5EBF1;
   background-color: #141C31;
 }
@@ -34,6 +34,10 @@ body {
   color: #E5EBF1;
   height: 100%;
   padding: 10px;
+  font-size: 20px;
+}
+.navbar a:hover {
+  color: #AA0A11;
 }
 .navbar form {
   height: 100%;
@@ -74,4 +78,31 @@ body {
 }
 .container .content {
   width: 100%;
+}
+
+.home .info {
+  text-align: center;
+}
+
+.posts {
+  width: 100%;
+}
+.posts .post {
+  margin: 2%;
+  padding: 10px;
+  border: 1px solid #E5EBF1;
+}
+.posts .post .title {
+  font-size: larger;
+}
+.posts .post .tag {
+  border-radius: 10px;
+  background-color: #AA0A11;
+  width: 60px;
+  margin-top: 10px;
+  text-align: center;
+}
+.posts .post .description {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

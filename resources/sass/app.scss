@@ -1,9 +1,9 @@
 $background: #141C31;
 $alt-background: #5F8BA9;
 $white: #E5EBF1;
-$red: #820000;
+$red: #AA0A11;
 $cyan: #21D6CB;
-$font: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+$font: Arial;
 
 * {
     box-sizing: border-box;
@@ -40,6 +40,10 @@ body {
         color: $white;
         height: 100%;
         padding: 10px;
+        font-size: 20px;
+        &:hover{
+            color: $red;
+        }
     }
     form {
         height: 100%;
@@ -84,4 +88,31 @@ body {
     }
 }
 
+.home {
+    .info {
+        text-align: center;
+    }
+}
 
+.posts {
+    width: 100%;
+    .post {
+        margin: 2%;
+        padding: 10px;
+        border: 1px solid $white;
+        .title {
+            font-size: larger;
+        }
+        .tag {
+            border-radius: 10px;
+            background-color: $red;
+            width: 60px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .description {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+}

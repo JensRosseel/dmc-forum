@@ -12,10 +12,10 @@
         <img src={{ asset('img/banner.png') }} alt="banner">
     </div>
     <div class="navbar">
-        <a href="/">Home</a>
-        <a href="/">Characters</a>
-        <a href="/">Weapons</a>
-        <a href="/">Locales</a>
+        <a href={{ route('home') }}>Home</a>
+        <a href="./">Characters</a>
+        <a href="./">Weapons</a>
+        <a href="./">Locales</a>
         <form action="" method="get">
             @csrf
             <input type="text" name="search" id="search" placeholder="Search...">

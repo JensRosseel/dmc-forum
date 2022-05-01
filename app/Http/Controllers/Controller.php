@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -13,6 +14,7 @@ class Controller extends BaseController
 
     function home()
     {
-        return view('home');
+        $posts = Post::all()->take(10);
+        return view('home', ['posts' => $posts]);
     }
 }
