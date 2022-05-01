@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #E5EBF1;
+  background-color: #141C31;
+}
+
+.header {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.header img {
+  height: 100%;
+}
+
+.navbar {
+  width: 100%;
+  height: 40px;
+  background-color: #5F8BA9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar a {
+  text-decoration: none;
+  text-align: center;
+  color: #E5EBF1;
+  height: 100%;
+  padding: 10px;
+}
+.navbar form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+}
+.navbar form input {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: #E5EBF1;
+  background-color: inherit;
+  border: none;
+}
+.navbar form input[type=submit] {
+  background-image: url("/dmc-forum/public/img/search.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+.navbar form input[type=submit]:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+.container .left, .container .right {
+  width: 100%;
+}
+.container .left img, .container .right img {
+  position: absolute;
+  width: 20%;
+}
+.container .content {
+  width: 100%;
+}
