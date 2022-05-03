@@ -23,7 +23,7 @@ body {
 .navbar {
   width: 100%;
   height: 40px;
-  background-color: #5F8BA9;
+  background-color: #AA0A11;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +37,7 @@ body {
   font-size: 20px;
 }
 .navbar a:hover {
-  color: #AA0A11;
+  color: #21D6CB;
 }
 .navbar form {
   height: 100%;
@@ -105,4 +105,53 @@ body {
 .posts .post .description {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.account {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.account form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 20px;
+  border: 1px solid #E5EBF1;
+  background-color: #AA0A11;
+}
+.account form input {
+  margin-bottom: 10px;
+}
+.account a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.account a:hover {
+  color: #21D6CB;
+}
+
+.profile {
+  position: absolute;
+  margin-left: 90%;
+  width: 10%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+.profile a {
+  text-decoration: none;
+  color: #AA0A11;
+}
+.profile a:hover {
+  color: #21D6CB;
 }

@@ -17,4 +17,14 @@ class Controller extends BaseController
         $posts = Post::all()->take(10);
         return view('home', ['posts' => $posts]);
     }
+
+    function login()
+    {
+        return view('login');
+    }
+
+    function register()
+    {
+        return view('register');
+    }
 }
