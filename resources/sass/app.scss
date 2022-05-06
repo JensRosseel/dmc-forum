@@ -69,7 +69,28 @@ body {
             }
         }
     }
-
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        &:hover .dropdown-content{
+            display: block;
+        }
+        .dropdown-title {
+            padding: 10px;
+            font-size: 20px;
+            height: 40px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: $red;
+            width: 83px;
+            z-index: 1;
+            a {
+                padding: 10px;
+            }
+        }
+    }
 }
 
 .container {

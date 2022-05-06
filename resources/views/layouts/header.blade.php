@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href={{ asset('css/app.css') }}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>DMC Forum</title>
 </head>
 <body>
@@ -30,17 +31,24 @@
     </div>
     <div class="navbar">
         <a href={{ route('home') }}>Home</a>
-        <a href="./">Characters</a>
-        <a href="./">Weapons</a>
-        <a href="./">Locales</a>
-        <form action="" method="get">
+        <div class="dropdown">
+            <div class="dropdown-title">DMC <i class="fa fa-caret-down"></i></div>
+            <div class="dropdown-content">
+                <a href={{ route('dmc', 1) }}>DMC 1</a>
+                <a href={{ route('dmc', 2) }}>DMC 2</a>
+                <a href={{ route('dmc', 3) }}>DMC 3</a>
+                <a href={{ route('dmc', 4) }}>DMC 4</a>
+                <a href={{ route('dmc', 5) }}>DMC 5</a>
+            </div>
+        </div>
+        @if (Auth::check())
+            <a href={{ route('postmaker') }}>Make Post</a>
+        @endif
+        <form action={{ route('search') }} method="get">
             @csrf
             <input type="text" name="search" id="search" placeholder="Search...">
             <input type="submit" value="">
         </form>
-        @if (Auth::check())
-            <a href={{ route('postmaker') }}>Make Post</a>
-        @endif
     </div>
     <div class="container">
         <div class="left"><img src={{ asset('img/left-banner.png') }} alt="left banner"></div>

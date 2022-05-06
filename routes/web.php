@@ -13,3 +13,5 @@ Route::post('/handleRegister', [UserController::class, 'handleRegister'])->name(
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/postmaker', [Controller::class, 'postmaker'])->name('postmaker');
 Route::post('/makePost', [PostController::class, 'makePost'])->name('makePost');
+Route::get('/search', [Controller::class, 'search'])->name('search');
+Route::get('/dmc/{dmc}', [Controller::class, 'dmc'])->name('dmc');

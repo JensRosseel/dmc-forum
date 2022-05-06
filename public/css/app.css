@@ -64,6 +64,28 @@ body {
 .navbar form input[type=submit]:hover {
   cursor: pointer;
 }
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+.navbar .dropdown .dropdown-title {
+  padding: 10px;
+  font-size: 20px;
+  height: 40px;
+}
+.navbar .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AA0A11;
+  width: 83px;
+  z-index: 1;
+}
+.navbar .dropdown .dropdown-content a {
+  padding: 10px;
+}
 
 .container {
   display: grid;
