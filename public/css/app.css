@@ -68,6 +68,10 @@ body {
   position: relative;
   display: inline-block;
 }
+.navbar .dropdown:hover {
+  cursor: pointer;
+  color: #21D6CB;
+}
 .navbar .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -179,7 +183,7 @@ body {
 }
 
 .postmaker {
-  height: 80vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   margin: 10px;

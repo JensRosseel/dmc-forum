@@ -72,6 +72,10 @@ body {
     .dropdown {
         position: relative;
         display: inline-block;
+        &:hover {
+            cursor: pointer;
+            color: $cyan;
+        }
         &:hover .dropdown-content{
             display: block;
         }
@@ -187,7 +191,7 @@ body {
 }
 
 .postmaker {
-    height: 80vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     margin: 10px;
