@@ -6,9 +6,9 @@
 @endif
 
 @if (count($errors) > 0)
-    <ul>
+    <ul class="errors">
     @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
+        <li class="error">{{ $error }}</li>
     @endforeach
     </ul>
 @endif

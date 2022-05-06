@@ -5,10 +5,6 @@
     <div class="info">
         <h1>Welcome to the DMC forum</h1>
         <p>You can make use of the forum to upload and look up combos, tips & tricks and glitches.</p>
-        <p>
-            You can also look up descriptions of the characters, weapons and worlds of Devil May Cry using
-            the navigation bar.
-        </p>
     </div>
 
     <div class="posts">
