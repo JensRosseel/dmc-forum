@@ -27,4 +27,9 @@ class Controller extends BaseController
     {
         return view('register');
     }
+
+    function postmaker()
+    {
+        return view('postmaker');
+    }
 }

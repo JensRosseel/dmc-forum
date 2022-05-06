@@ -38,6 +38,9 @@
             <input type="text" name="search" id="search" placeholder="Search...">
             <input type="submit" value="">
         </form>
+        @if (Auth::check())
+            <a href={{ route('postmaker') }}>Make Post</a>
+        @endif
     </div>
     <div class="container">
         <div class="left"><img src={{ asset('img/left-banner.png') }} alt="left banner"></div>

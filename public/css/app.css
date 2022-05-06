@@ -155,3 +155,34 @@ body {
 .profile a:hover {
   color: #21D6CB;
 }
+
+.postmaker {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.postmaker label {
+  margin: 15px 0 15px 0;
+}
+.postmaker select {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.postmaker textarea {
+  resize: none;
+  width: 100%;
+  height: 50%;
+}
+.postmaker input#author {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.postmaker input[type=submit] {
+  margin-top: 10px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
