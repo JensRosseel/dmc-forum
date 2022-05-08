@@ -26,8 +26,7 @@
     </select>
     <label for="description">Description: </label>
     <textarea name="description" id="description"></textarea>
-    <label for="author">Author:</label>
-    <input type="text" name="author" id="author" value={{ Auth::user()->username }} readonly>
+    <input type="text" name="author" id="author" value={{ Auth::user()->username }}>
     <input type="submit" name="submit" id="submit" value="Make Post">
 </form>
 @endsection

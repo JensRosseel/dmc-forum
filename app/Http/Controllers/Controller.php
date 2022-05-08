@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Reply;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -45,5 +46,12 @@ class Controller extends BaseController
     {
         $posts = Post::where('tag', 'DMC ' . $dmc)->get();
         return view('home', ['posts' => $posts]);
+    }
+
+    function post($post)
+    {
+        $posts = Post::where('id', $post)->get();
+        $replies = Reply::where('postid', $post)->get();
+        return view('post', ['posts' => $posts], ['replies' => $replies]);
     }
 }

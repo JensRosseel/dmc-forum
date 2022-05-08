@@ -94,12 +94,13 @@ body {
 .container {
   display: grid;
   grid-template-columns: 20% 60% 20%;
+  min-height: 80vh;
 }
 .container .left, .container .right {
   width: 100%;
 }
 .container .left img, .container .right img {
-  position: absolute;
+  position: fixed;
   width: 20%;
 }
 .container .content {
@@ -110,27 +111,30 @@ body {
   text-align: center;
 }
 
-.posts {
-  width: 100%;
-}
-.posts .post {
+.post {
   margin: 2%;
   padding: 10px;
   border: 1px solid #E5EBF1;
 }
-.posts .post .title {
+.post .title {
   font-size: larger;
 }
-.posts .post .tag {
+.post .tag {
   border-radius: 10px;
   background-color: #AA0A11;
   width: 60px;
   margin-top: 10px;
   text-align: center;
 }
-.posts .post .description {
+.post .description {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+.post form {
+  margin-top: 10px;
+}
+.post form input[type=text] {
+  display: none;
 }
 
 .account {
@@ -222,4 +226,45 @@ body {
   margin: 5px;
   padding: 5px;
   background-color: #AA0A11;
+}
+
+#author, #postid {
+  display: none;
+}
+
+.replies {
+  list-style: none;
+  margin-bottom: 340px;
+}
+.replies .reply {
+  color: #E5EBF1;
+  border: 1px solid #E5EBF1;
+  margin: 2%;
+}
+
+.replyBox {
+  height: 320px;
+  width: 60%;
+  position: fixed;
+  bottom: 0;
+}
+.replyBox form textarea {
+  height: 280px;
+  width: 100%;
+}
+
+textarea {
+  color: #E5EBF1;
+  border: 1px solid #E5EBF1;
+  background-color: #141C31;
+}
+
+input[type=submit] {
+  color: #E5EBF1;
+  border: 1px solid #E5EBF1;
+  background-color: #AA0A11;
+}
+input[type=submit]:hover {
+  background-color: #21D6CB;
+  cursor: pointer;
 }

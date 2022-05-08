@@ -100,10 +100,11 @@ body {
 .container {
     display: grid;
     grid-template-columns: 20% 60% 20%;
+    min-height: 80vh;
     .left, .right {
         width: 100%;
         img {
-            position: absolute;
+            position: fixed;
             width: 20%;
         }
     }
@@ -118,25 +119,30 @@ body {
     }
 }
 
-.posts {
-    width: 100%;
-    .post {
-        margin: 2%;
-        padding: 10px;
-        border: 1px solid $white;
-        .title {
-            font-size: larger;
-        }
-        .tag {
-            border-radius: 10px;
-            background-color: $red;
-            width: 60px;
-            margin-top: 10px;
-            text-align: center;
-        }
-        .description {
-            margin-top: 15px;
-            margin-bottom: 15px;
+.post {
+    margin: 2%;
+    padding: 10px;
+    border: 1px solid $white;
+    .title {
+        font-size: larger;
+    }
+    .tag {
+        border-radius: 10px;
+        background-color: $red;
+        width: 60px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .description {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    form {
+        margin-top: 10px;
+        input {
+            &[type=text] {
+                display: none;
+            }
         }
     }
 }
@@ -225,5 +231,48 @@ body {
         margin: 5px;
         padding: 5px;
         background-color: $red;
+    }
+}
+
+#author, #postid {
+    display: none;
+}
+
+.replies {
+    list-style: none;
+    margin-bottom: 340px;
+    .reply {
+        color: $white;
+        border: 1px solid $white;
+        margin: 2%;
+    }
+}
+
+.replyBox {
+    height: 320px;
+    width: 60%;
+    position: fixed;
+    bottom: 0;
+    form {
+        textarea {
+            height: 280px;
+            width: 100%;
+        }
+    }
+}
+
+textarea {
+    color: $white;
+    border: 1px solid $white;
+    background-color: $background;
+}
+
+input[type=submit] {
+    color: $white;
+    border: 1px solid $white;
+    background-color: $red;
+    &:hover {
+        background-color: $cyan;
+        cursor: pointer;
     }
 }

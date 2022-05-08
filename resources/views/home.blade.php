@@ -16,10 +16,14 @@
                 {{ $post->description }}
             </div>
             <div class="author">author: {{ $post->author }}</div>
+            @if (Auth::check())
+                <form action={{ route('post', $post->id) }} method="get">
+                    @csrf
+                    <input type="submit" name="submit" id="submit" value="Reply">
+                </form>
+            @endif
         </div>
         @endforeach
     </div>
 </div>
-
-
 @endsection
