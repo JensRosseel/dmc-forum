@@ -12,14 +12,11 @@
         <div class="post">
             <div class="title">{{ $post->title }}</div>
             <div class="tag">{{ $post->tag }}</div>
-            <div class="description">
-                {{ $post->description }}
-            </div>
             <div class="author">author: {{ $post->author }}</div>
             @if (Auth::check())
                 <form action={{ route('post', $post->id) }} method="get">
                     @csrf
-                    <input type="submit" name="submit" id="submit" value="Reply">
+                    <input type="submit" name="submit" id="submit" value="View">
                 </form>
             @endif
         </div>

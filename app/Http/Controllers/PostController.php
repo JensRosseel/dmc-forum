@@ -17,7 +17,16 @@ class PostController extends Controller
             'author' => 'required',
         ]);
 
-        Post::create(request(['title', 'tag', 'description', 'author']));
+        $videoChopped = explode('=', request('video'));
+        $videourl = "https://www.youtube.com/embed/" . $videoChopped[1];
+
+        Post::create([
+            'title' => request('title'),
+            'tag'=> request('tag'),
+            'description'=> request('description'),
+            'author'=> request('author'),
+            'video' => $videourl,
+        ]);
         return redirect()->home();
     }
 

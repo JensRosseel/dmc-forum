@@ -26,6 +26,8 @@
     </select>
     <label for="description">Description: </label>
     <textarea name="description" id="description"></textarea>
+    <label for="video">Video Link (optional): </label>
+    <input type="text" name="video" id="video" placeholder="https://www.youtube.com/watch?v=">
     <input type="text" name="author" id="author" value={{ Auth::user()->username }}>
     <input type="submit" name="submit" id="submit" value="Make Post">
 </form>

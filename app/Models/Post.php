@@ -14,5 +14,6 @@ class Post extends Model
         'tag',
         'description',
         'author',
+        'video',
     ];
 }

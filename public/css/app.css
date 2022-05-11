@@ -111,30 +111,43 @@ body {
   text-align: center;
 }
 
-.post {
+.post, .post-extended {
+  position: relative;
   margin: 2%;
   padding: 10px;
   border: 1px solid #E5EBF1;
 }
-.post .title {
+.post .title, .post-extended .title {
   font-size: larger;
 }
-.post .tag {
+.post .tag, .post-extended .tag {
   border-radius: 10px;
   background-color: #AA0A11;
   width: 60px;
   margin-top: 10px;
+  margin-bottom: 15px;
   text-align: center;
 }
-.post .description {
-  margin-top: 15px;
-  margin-bottom: 15px;
+.post iframe, .post-extended iframe {
+  float: right;
+  width: 480px;
+  height: 270px;
 }
-.post form {
+.post form, .post-extended form {
   margin-top: 10px;
 }
-.post form input[type=text] {
+.post form input[type=text], .post-extended form input[type=text] {
   display: none;
+}
+
+.post-extended {
+  min-height: 290px;
+}
+.post-extended .author {
+  position: absolute;
+  margin: 10px;
+  bottom: 0;
+  left: 0;
 }
 
 .account {
@@ -257,6 +270,12 @@ textarea {
   color: #E5EBF1;
   border: 1px solid #E5EBF1;
   background-color: #141C31;
+}
+
+input[type=text], select {
+  color: #E5EBF1;
+  background-color: #141C31;
+  border: 1px solid #E5EBF1;
 }
 
 input[type=submit] {

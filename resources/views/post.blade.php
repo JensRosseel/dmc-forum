@@ -2,7 +2,10 @@
 
 @section('content')
 @foreach ($posts as $key => $post)
-    <div class="post">
+    <div class="post-extended">
+        @if ($post->video != null)
+        <iframe src={{ $post->video }}></iframe>
+        @endif
         <div class="title">{{ $post->title }}</div>
         <div class="tag">{{ $post->tag }}</div>
         <div class="description">
