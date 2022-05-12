@@ -63,6 +63,7 @@ body {
 }
 .navbar form input[type=submit]:hover {
   cursor: pointer;
+  background-color: none;
 }
 .navbar .dropdown {
   position: relative;
@@ -279,7 +280,7 @@ textarea {
   background-color: #141C31;
 }
 
-input[type=text], select {
+input[type=text], input[type=email], input[type=password], select {
   color: #E5EBF1;
   background-color: #141C31;
   border: 1px solid #E5EBF1;

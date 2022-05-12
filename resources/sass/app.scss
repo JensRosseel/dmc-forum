@@ -66,6 +66,7 @@ body {
             }
             &[type=submit]:hover {
                 cursor: pointer;
+                background-color: none;
             }
         }
     }
@@ -287,7 +288,7 @@ textarea {
     background-color: $background;
 }
 
-input[type=text], select {
+input[type=text], input[type=email], input[type=password], select {
     color: $white;
     background-color: $background;
     border: 1px solid $white;
